@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Weekly Budget</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1> Simple Weekly Budget </h1>
+	<br>
+	<br>
+	<h2>Build Your Weekly Budget</h2>
+	<div id='userInputs'>
+		<h3>Your Income</h3>
+		How often are you paid?<br>
+		<input type='radio' name='payFreq' value='monthly'>Once a Month<br>
+		<input type='radio' name='payFreq' value='bimonthly'>Twice a Month<br>
+		<input type='radio' name='payFreq' value='weekly'>Once a Week<br>
+		<input type='radio' name='payFreq' value='biweekly'>Every Two Weeks<br>
+		<br>
+		How much money do you make each pay period? <i>(after taxes)</i> <br>
+		<input type="number" name="income" step='.01'> 
+
+		<h3>Monthly Expenses</h3>
+		<b>How much do you pay each month for each of these regular expenses?</b> <br>
+		<i>Only include the expenses that recur each and every month.</i><br>
+		<br>
+		<div id='expenseGrid'>
+			<div class='expenseLabel'>
+				Rent/Mortgage 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='home' name="home" step='.01' > 
+			</div>
+			<div class='expenseLabel'>
+				Car Payment 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='car' name="car" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Utilities 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='utilities' name="utilities" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Additional Loan Payments 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='loan' name="loan" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Insurance 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='insurance' name="insurance" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Phone(s) 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='phone' name="phone" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Cable 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='cable' name="cable" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Internet 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='internet' name="internet" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Investments 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='investments' name="investments" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Donations 
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id='donations' name="donations" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Savings
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id="savings" name="savings" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Gym Membership
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id="gym" name="gym" step='.01'> 
+			</div>
+			<div class='expenseLabel'>
+				Other
+			</div>
+			<div class='expenseValue'>
+				<input type="number" id="other" name="other" step='.01'> 
+			</div>
+		</div>
+		<button id='calculate'> Build My Budget </button>
+	</div>
+
+
+	</div>
+
+	<script src="myscript.js"> </script>
+</body>
+</html>

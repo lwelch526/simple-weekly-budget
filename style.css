@@ -1,0 +1,13 @@
+#expenseGrid{
+	display: grid;
+	grid-template-columns: 200px 40px;
+}
+
+.expenseLabel{
+	text-align: right;
+	padding-right: 5px;
+}
+
+.expenseValue{
+
+}
