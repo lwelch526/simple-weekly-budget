@@ -13,13 +13,15 @@
 	<div id='userInputs'>
 		<h3>Your Income</h3>
 		How often are you paid?<br>
-		<input type='radio' name='payFreq' value='monthly'>Once a Month<br>
-		<input type='radio' name='payFreq' value='bimonthly'>Twice a Month<br>
-		<input type='radio' name='payFreq' value='weekly'>Once a Week<br>
-		<input type='radio' name='payFreq' value='biweekly'>Every Two Weeks<br>
+		<div>
+			<input type='radio' name='payFreq' value='monthly'>Once a Month<br>
+			<input type='radio' name='payFreq' value='bimonthly'>Twice a Month<br>
+			<input type='radio' name='payFreq' value='weekly'>Once a Week<br>
+			<input type='radio' name='payFreq' value='biweekly'>Every Two Weeks<br>
+		</div>
 		<br>
 		How much money do you make each pay period? <i>(after taxes)</i> <br>
-		<input type="number" name="income" step='.01'> 
+		<input type="number" name="income" id='income' step='.01'> 
 
 		<h3>Monthly Expenses</h3>
 		<b>How much do you pay each month for each of these regular expenses?</b> <br>

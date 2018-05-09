@@ -1,6 +1,6 @@
 let calcBtn = document.querySelector('#calculate');
 
-let expenseTotal = 0;
+let expenseTotal;
 function makeBudget() {
 	let home = document.getElementById('home').value;
 	// an unspecified field gets the value ""
@@ -21,7 +21,22 @@ function makeBudget() {
 				   Number(cable) + Number(internet) + Number(investments) +
 				   Number(donations) + Number(savings) + Number(gym) + 
 				   Number(other);
-	alert(expenseTotal);
+
+	let payFreq = document.querySelector('input[name = "payFreq"]:checked').value;
+	alert('Your regular monthly expenses total to ' + expenseTotal);
+	let payValue = document.getElementById('income').value;
+	let payMonthly;
+	if (payFreq === 'monthly'){
+		payMonthly = payValue;
+	} else if (payFreq==='weekly') {
+		payMonthly = payValue*4.34524;
+	} else if (payFreq==='biweekly'){
+		payMonthly = payValue*4.34524/2;
+	} else {
+		payMonthly = payValue*2;
+	}
+	payMonthly = payMonthly.toFixed(2);
+	alert('Your monthly income is ' + payMonthly );
 }
 
 calcBtn.addEventListener('click', () => {
