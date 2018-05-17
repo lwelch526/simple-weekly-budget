@@ -1,8 +1,8 @@
 let calcBtn = document.querySelector('#calculate');
 
 let expenseTotal;
-function makeBudget() {
-	let home = document.getElementById('home').value;
+function calcExpenseTotal(){
+		let home = document.getElementById('home').value;
 	// an unspecified field gets the value ""
 	let car = document.getElementById('car').value;
 	let utilities = document.getElementById('utilities').value;
@@ -21,11 +21,12 @@ function makeBudget() {
 				   Number(cable) + Number(internet) + Number(investments) +
 				   Number(donations) + Number(savings) + Number(gym) + 
 				   Number(other);
+}
 
+let payMonthly;
+function calcMonthlyIncome(){
 	let payFreq = document.querySelector('input[name = "payFreq"]:checked').value;
-	alert('Your regular monthly expenses total to ' + expenseTotal);
 	let payValue = document.getElementById('income').value;
-	let payMonthly;
 	if (payFreq === 'monthly'){
 		payMonthly = payValue;
 	} else if (payFreq==='weekly') {
@@ -35,10 +36,52 @@ function makeBudget() {
 	} else {
 		payMonthly = payValue*2;
 	}
-	payMonthly = payMonthly.toFixed(2);
-	alert('Your monthly income is ' + payMonthly );
+	payMonthly = Number(payMonthly.toFixed(2));
+}
+let weeklySpendingCash;
+let monthlySpendingCash;
+function makeBudget() {
+	calcExpenseTotal();
+	calcMonthlyIncome();
+	monthlySpendingCash = payMonthly-expenseTotal;
+	weeklySpendingCash = monthlySpendingCash/4.34524;
+	weeklySpendingCash = Number(weeklySpendingCash.toFixed(2));
+
+	// Add a new paragraph below the button
+		const outputBudget = document.querySelector('#outputBudget');
+
+		// If the budget has already been built, delete the old output
+		let oldOutput = document.querySelector('.budgetParas');
+		if (oldOutput !== null){
+			outputBudget.removeChild(oldOutput);
+		}
+
+		let content = document.createElement('div');
+		outputBudget.appendChild(content);
+		if (weeklySpendingCash > 0){
+			content.classList.add('budgetParas');
+			let para = document.createElement('p'); // Create a p element
+			let para2 = document.createElement('p'); // Create a p element
+			let para3 = document.createElement('p'); // Create a p element
+			para.textContent = 'Excluding the monthly expenses you have entered, spend no more than $' + weeklySpendingCash + ' every week.' ;
+			para.style.color = 'blue'; // Change the color of the text
+			para2.textContent = 'Your regular monthly expenses total to $' + expenseTotal + '.' ;
+			para3.textContent = 'Your monthly income is $' + payMonthly + '.' ;
+			content.appendChild(para);  // add the p element to the page as a child of content
+			content.appendChild(para2);
+			content.appendChild(para3);
+		} else {
+			let para = document.createElement('p'); // Create a p element
+			para.textContent = 'You are spending more on your regular expenses than you are making each month. ' + 
+								'To free up some weekly spending money, consider cancelling a recurring expense, ' +
+								'or find a way to decrease one or more of your monthly expenses.';
+			content.appendChild(para);
+		}
+		
 }
 
 calcBtn.addEventListener('click', () => {
   makeBudget();
 });
+
+
