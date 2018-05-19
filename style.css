@@ -8,6 +8,82 @@
 	padding-right: 5px;
 }
 
-.expenseValue{
+/*Styling of Navigation Bar*/
+/*ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
+li {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.right{
+	float: right;
+}
+
+.nav-bar {
+    background-color: #DCDCDC;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#web-title {
+	font-size: 1.25em;
+	font-weight: 800;
+	margin: 0;
+}
+
+#content{
+	margin-top: 89px;
+	background-color: #DCDCDC;
+}*/
+
+/*Styling of Title and Intro*/
+#website-intro {
+	/*Make a full screen opening picture*/
+	background-image: 	url('Pictures/coffee-and-computer.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+	height: 50%; 
+	background-size: cover; 
+}
+
+#site-title {
+	font-size: 2.0rem;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#site-description {
+	font-size: 1.0rem;
+	margin: 5px 0 0 0;
+}
+
+#intro-words {
+	color: white; /*Color of the text*/
+	text-align: left;
+	/*margin-left: 40px;*/
+	position: absolute;
+    bottom: 53%;
+    left: 16px;
+}
+
+.blue {
+	color: blue;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
