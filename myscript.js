@@ -28,7 +28,7 @@ function calcMonthlyIncome(){
 	let payFreq = document.querySelector('input[name = "payFreq"]:checked').value;
 	let payValue = document.getElementById('income').value;
 	if (payFreq === 'monthly'){
-		payMonthly = payValue;
+		payMonthly = payValue*1;
 	} else if (payFreq==='weekly') {
 		payMonthly = payValue*4.34524;
 	} else if (payFreq==='biweekly'){

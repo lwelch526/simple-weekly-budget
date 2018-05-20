@@ -1,9 +1,16 @@
 #expenseGrid{
 	display: grid;
-	grid-template-columns: 200px 40px;
+	grid-template-columns: 60% 40%;
+    margin-left: 2%;
 }
 
-.expenseLabel{
+.expenseValue input{
+	width: 80%;
+	/*right: 2%;*/
+	align: left;
+}
+
+.expenseLabel {
 	text-align: right;
 	padding-right: 5px;
 }
@@ -52,11 +59,14 @@ li {
 	background-position: center;
     background-repeat: no-repeat;
 	height: 50%; 
-	background-size: cover; 
+	background-size: cover;
+    border-style: none none solid none;
+    border-width: 3px; 
+    border-color: grey;
 }
 
 #site-title {
-	font-size: 2.0rem;
+	font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 0.08em;
@@ -66,16 +76,18 @@ li {
 
 #site-description {
 	font-size: 1.0rem;
-	margin: 5px 0 0 0;
+	margin: 0 0 0 0;
 }
+
 
 #intro-words {
 	color: white; /*Color of the text*/
-	text-align: left;
-	/*margin-left: 40px;*/
+	text-align: center;
 	position: absolute;
-    bottom: 53%;
-    left: 16px;
+    bottom: 50%; /*specifying location of the words*/
+    /*left: 16px;*/
+    margin-bottom: 1%;
+    width: 100%;
 }
 
 .blue {
@@ -86,4 +98,42 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: Times,'Times New Roman', serif;
+}
+
+.blocks {
+	width: 33.3%;
+	/*background-color: #8699a752;*/
+	/*border-style: none solid;*/
+	border-color: grey;
+	border-width: 2px;
+	/*border-radius: 10px;*/
+	text-align: center;
+	margin-top: 1%;
+	top: 50%;
+	/*height: 20%;*/
+}
+
+#money-in {
+	position: absolute;
+	left: 0px;
+	border-style: none solid none none;
+	height:410px;
+}
+
+#money-out {
+	position: absolute;
+	left: 33.3%;
+	border-style: none solid none none;
+}
+
+#outputBudget {
+	position: absolute;
+	left: 66.6%;
+}
+
+.section-title {
+	font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
 }
