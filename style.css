@@ -1,58 +1,11 @@
-#expenseGrid{
-	display: grid;
-	grid-template-columns: 60% 40%;
-    margin-left: 2%;
-}
-
-.expenseValue input{
-	width: 80%;
-	/*right: 2%;*/
-	align: left;
-}
-
-.expenseLabel {
-	text-align: right;
-	padding-right: 5px;
-}
-
-/*Styling of Navigation Bar*/
-/*ul {
-    list-style-type: none;
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: Times,'Times New Roman', serif;
 }
 
-li {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-}
-
-.right{
-	float: right;
-}
-
-.nav-bar {
-    background-color: #DCDCDC;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-#web-title {
-	font-size: 1.25em;
-	font-weight: 800;
-	margin: 0;
-}
-
-#content{
-	margin-top: 89px;
-	background-color: #DCDCDC;
-}*/
-
-/*Styling of Title and Intro*/
+/* Title and Intro -------------------------------*/
 #website-intro {
 	/*Make a full screen opening picture*/
 	background-image: 	url('Pictures/coffee-and-computer.jpg');
@@ -61,12 +14,12 @@ li {
 	height: 50%; 
 	background-size: cover;
     border-style: none none solid none;
-    border-width: 3px; 
-    border-color: grey;
+    border-width: 20px; 
+    border-color: #dc8445;
 }
 
 #site-title {
-	font-size: 2.5rem;
+	font-size: 6vw;
     font-weight: 900;
     line-height: 1.25;
     letter-spacing: 0.08em;
@@ -75,7 +28,7 @@ li {
 }
 
 #site-description {
-	font-size: 1.0rem;
+	font-size: 3vw;
 	margin: 0 0 0 0;
 }
 
@@ -89,20 +42,11 @@ li {
     margin-bottom: 1%;
     width: 100%;
 }
+/*-----------------------------------------------------*/
 
-.blue {
-	color: blue;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-    font-family: Times,'Times New Roman', serif;
-}
-
+/* All 3 Blocks ------------------------------- */
 .blocks {
-	width: 33.3%;
+	width: 33%;
 	/*background-color: #8699a752;*/
 	/*border-style: none solid;*/
 	border-color: grey;
@@ -112,28 +56,114 @@ body, html {
 	margin-top: 1%;
 	top: 50%;
 	/*height: 20%;*/
-}
-
-#money-in {
-	position: absolute;
-	left: 0px;
-	border-style: none solid none none;
-	height:410px;
-}
-
-#money-out {
-	position: absolute;
-	left: 33.3%;
-	border-style: none solid none none;
-}
-
-#outputBudget {
-	position: absolute;
-	left: 66.6%;
+	font-size: 2vw;
+	float: left;
 }
 
 .section-title {
-	font-size: 2rem;
+	font-size: 4vw;
     text-transform: uppercase;
     margin: 0 0 10px 0;
 }
+/*---------------------------------------------------*/
+
+/* Money In -----------------------------------------*/
+label {
+	cursor: pointer;
+	background-color: grey;
+	padding: 3px;
+}
+
+.buttons {
+	margin-bottom: 7px;
+}
+
+input[type='radio']{
+	visibility: hidden;
+	display: none;
+	position: absolute;
+}
+
+input[type=radio]:checked + label{
+	background-color: black;
+}
+
+.question{
+	margin-bottom: 5px;
+}
+
+#income {
+	width: 30%;
+	font-size: 2vw;
+}
+/*-------------------------------------------------*/
+
+
+/* Money Out ---------------------------------------*/
+#money-out {
+	border-style: none solid none solid;
+}
+
+#expenseGrid{
+	display: grid;
+	grid-template-columns: 60% 40%;
+    margin-left: 2%;
+}
+
+.expenseValue input{
+	width: 80%;
+	/*right: 2%;*/
+	align: left;
+	font-size: 2vw;
+}
+
+
+.expenseLabel {
+	text-align: right;
+	padding-right: 5px;
+}
+/*-------------------------------------------------------*/
+
+/* Output Budget -------------------------------------------*/
+#calculate {
+	font-size: 2vw;
+}
+/*---------------------------------------------------------*/
+
+/* If the screen is small (Responsive HTML) -------------------- */
+@media screen and (max-width:600px) {
+	  #money-in, #money-out, #outputBudget {
+		    width:100%; /* The width is 100%, when the viewport is 600 or smaller */
+		    font-size: 4vw;
+		    border-style: none none solid none;
+		    padding-bottom: 2%;
+	  }
+	  .section-title {
+		  	font-size: 6vw;
+	  }
+	  #site-title{
+		  	font-size: 2.5rem;
+	  }
+	  #site-description {
+		font-size: 1rem;
+	  }
+	  .expenseValue {
+	  	text-align: left;
+	  	padding-left: 2%;
+	  }
+	  .expenseValue input{
+		width: 40%;
+		/*right: 2%;*/
+		align: left;
+		font-size: 4vw;
+	   }
+
+		#income {
+			font-size: 4vw;
+			width: 20%;
+		}
+		#expenseGrid {
+			grid-template-columns: 50% 50%;
+		}
+}
+/*-----------------------------------------------------*/

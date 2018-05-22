@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Simple Weekly Budget</title>
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 	<!-- <div class="nav-bar"> 
@@ -35,16 +35,25 @@
 	</div> -->
 
 
-	<div id='content' style="margin-top: 70px">
+	<div id='content'>
 		<div id='userInputs'>
 			<div id='money-in' class='blocks'>
 				<p class='section-title'>Money In</p>
-				How often are you paid?<br>
+
+				<div class='question'>How often are you paid?</div>
 				<div>
-					<input type='radio' name='payFreq' value='monthly'>Once a Month<br>
-					<input type='radio' name='payFreq' value='bimonthly'>Twice a Month<br>
-					<input type='radio' name='payFreq' value='weekly'>Once a Week<br>
-					<input type='radio' name='payFreq' value='biweekly'>Every Two Weeks<br>
+					<div class='buttons'>
+						<input type='radio' name='payFreq' value='monthly' id='monthly'><label for='monthly'>Once a Month</label>
+					</div>
+					<div class='buttons'>
+						<input type='radio' name='payFreq' value='bimonthly' id='bimonthly'><label for='bimonthly'>Twice a Month</label>
+					</div>
+					<div class='buttons'>
+						<input type='radio' name='payFreq' value='weekly' id='weekly'><label for='weekly'>Once a Week</label>
+					</div>
+					<div class='buttons'>
+						<input type='radio' name='payFreq' value='biweekly' id='biweekly'><label for='biweekly'>Every Two Weeks</label>
+					</div>
 				</div>
 				<br>
 				How much money do you make each pay period? <i>(after taxes)</i> <br>
@@ -53,7 +62,7 @@
 			
 			<div id='money-out' class='blocks'>
 				<p class='section-title'>Money Out</p>
-				<b>How much do you pay monthly for each of these regular expenses?</b> <br>
+				<b>What are your regular monthly expenses?</b> <br>
 				<i>Only include the expenses that recur each and every month.</i><br>
 				<br>
 				<div id='expenseGrid'>
@@ -112,16 +121,22 @@
 						<input type="number" id='investments' name="investments" step='.01'> 
 					</div>
 					<div class='expenseLabel'>
+						Long-Term Savings
+					</div>
+					<div class='expenseValue'>
+						<input type="number" id="long-savings" name="savings" step='.01'> 
+					</div>
+					<div class='expenseLabel'>
+						Big Expense Savings
+					</div>
+					<div class='expenseValue'>
+						<input type="number" id="big-expense" name="savings" step='.01'> 
+					</div>
+					<div class='expenseLabel'>
 						Donations 
 					</div>
 					<div class='expenseValue'>
 						<input type="number" id='donations' name="donations" step='.01'> 
-					</div>
-					<div class='expenseLabel'>
-						Savings
-					</div>
-					<div class='expenseValue'>
-						<input type="number" id="savings" name="savings" step='.01'> 
 					</div>
 					<div class='expenseLabel'>
 						Gym Membership

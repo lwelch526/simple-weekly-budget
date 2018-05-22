@@ -13,14 +13,16 @@ function calcExpenseTotal(){
 	let internet = document.getElementById('internet').value;
 	let investments = document.getElementById('investments').value;
 	let donations = document.getElementById('donations').value;
-	let savings = document.getElementById('savings').value;
+	let longSavings = document.getElementById('long-savings').value;
 	let gym = document.getElementById('gym').value;
 	let other = document.getElementById('other').value;
+	let bigExpense = document.getElementById('big-expense').value;
+
 	expenseTotal = Number(home) + Number(car) + Number(utilities) + 
 				   Number(loan) + Number(insurance) + Number(phone) +
 				   Number(cable) + Number(internet) + Number(investments) +
-				   Number(donations) + Number(savings) + Number(gym) + 
-				   Number(other);
+				   Number(donations) + Number(longSavings) + Number(gym) + 
+				   Number(other) + Number(bigExpense);
 }
 
 let payMonthly;
@@ -63,13 +65,13 @@ function makeBudget() {
 			let para = document.createElement('p'); // Create a p element
 			let para2 = document.createElement('p'); // Create a p element
 			let para3 = document.createElement('p'); // Create a p element
-			para.textContent = 'Excluding the monthly expenses you have entered, spend no more than $' + weeklySpendingCash + ' every week.' ;
-			para.style.color = 'blue'; // Change the color of the text
-			para2.textContent = 'Your regular monthly expenses total to $' + expenseTotal + '.' ;
-			para3.textContent = 'Your monthly income is $' + payMonthly + '.' ;
-			content.appendChild(para);  // add the p element to the page as a child of content
+			para.textContent = 'Weekly Spending Cash: $' + weeklySpendingCash  ;
+			para.style.fontSize = '3vw'; // Change the color of the text
+			para2.textContent = 'Regular Monthly Expenses: $' + expenseTotal  ;
+			para3.textContent = 'Average Monthly Income: $' + payMonthly  ;
+			content.appendChild(para3);  // add the p element to the page as a child of content
 			content.appendChild(para2);
-			content.appendChild(para3);
+			content.appendChild(para);
 		} else {
 			let para = document.createElement('p'); // Create a p element
 			para.textContent = 'You are spending more on your regular expenses than you are making each month. ' + 
