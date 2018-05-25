@@ -60,18 +60,18 @@ function makeBudget() {
 
 		let content = document.createElement('div');
 		outputBudget.appendChild(content);
+		content.classList.add('budgetParas');
 		if (weeklySpendingCash > 0){
-			content.classList.add('budgetParas');
 			let para = document.createElement('p'); // Create a p element
 			let para2 = document.createElement('p'); // Create a p element
 			let para3 = document.createElement('p'); // Create a p element
 			para.textContent = 'Weekly Spending Cash: $' + weeklySpendingCash  ;
-			para.style.fontSize = '3vw'; // Change the color of the text
+			para.style.fontWeight = '800'; // Change the color of the text
 			para2.textContent = 'Regular Monthly Expenses: $' + expenseTotal  ;
 			para3.textContent = 'Average Monthly Income: $' + payMonthly  ;
-			content.appendChild(para3);  // add the p element to the page as a child of content
+			content.appendChild(para);  // add the p element to the page as a child of content
+			content.appendChild(para3);
 			content.appendChild(para2);
-			content.appendChild(para);
 		} else {
 			let para = document.createElement('p'); // Create a p element
 			para.textContent = 'You are spending more on your regular expenses than you are making each month. ' + 
@@ -79,6 +79,7 @@ function makeBudget() {
 								'or find a way to decrease one or more of your monthly expenses.';
 			content.appendChild(para);
 		}
+		window.scrollTo(0,document.body.scrollHeight);
 		
 }
 
@@ -87,3 +88,32 @@ calcBtn.addEventListener('click', () => {
 });
 
 
+/////////// Make text appear and disappear /////////////
+const duration = 1000;
+const transition = 500;
+const fadeSpeed = 1000;
+
+// setTimeout(fade_in1, duration);
+// setTimeout(fade_out1, duration*2);
+// setTimeout(fade_in2, duration*2+transition);
+// setTimeout(fade_out2, duration*3+transition);
+// setTimeout(fade_in3, duration*3+transition*2);
+
+function fade_in1() {
+  $('#box-1').fadeIn(fadeSpeed);
+}
+function fade_out1() {
+  $('#box-1').fadeOut(fadeSpeed);
+}
+function fade_in2() {
+  $('#box-2').fadeIn(fadeSpeed);
+}
+function fade_out2() {
+  $('#box-2').fadeOut(fadeSpeed);
+}
+function fade_in3() {
+  $('#box-3').fadeIn(fadeSpeed);
+}
+function fade_out3() {
+  $('#box-2').fadeOut('slow');
+}

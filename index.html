@@ -4,44 +4,48 @@
   <title>Simple Weekly Budget</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-	<!-- <div class="nav-bar"> 
-		<ul>
-	  		<li id='web-title'>SimpleWeeklyBudget.com</li>
-	  		<div class="right">
-	  			<li>Build Your Budget</li>
-	  			<li>Our Story</li>
-	  		</div>
-		</ul>
-	</div> -->
 	<div id='website-intro'>
+	<div id='grey-box'>
 		<div id='intro-words'>
-			<!-- <p id='site-title'>SIMPLE<span class='blue'>WEEKLY</span>BUDGET<span class='blue'>.com</span></p> -->
 			<p id='site-title'>Simple Weekly Budget</p>
 			<p id='site-description'>An Easy and Effective Way to Manage Your Finances</p>
 		</div>
-	</div>
-	<!-- <div id='descriptive-blocks'>
-		<div id='block-1' class='blocks'>
-			<p>An easier way to manage your finances.</p>
-		</div>
-		<div id='block-2' class='blocks'>
-			<p>Start enjoying the money you have.</p>
-		</div>
-		<div id='block-3' class='blocks'>
-			<p>Find out exactly how much money you should be spending each week.</p>
-		</div>
-	</div> -->
+		<div id='site-explanation'>
+				<!-- Do you wonder whether or not you should go out to a nice dinner tonight? Whether you should buy that bottle of wine?  Those concert tickets? Have you tried budgeting all of your money into categories, but it's just too constricting and frusturating? -->
+			
+				<!-- <div class='rotating-boxes' id='box-1'>Welcome to a different way to budget. </div>
+				<div class='rotating-boxes' id='box-2' style='display:none;'>It's time to answer an important question.</div> -->
+				<!-- <div class='rotating-boxes' id='box-1' style='display:none;'>It's time to find out how much money you should be spending?</div> -->
+				<div class='rotating-boxes' id='box-1' style='display:none;'> How much should you be spending each week? </div>
+				<div class='rotating-boxes' id='box-2' style='display:none;'> All you have to do is ask yourself two easy questions.</div>
+				<div class='rotating-boxes' id='box-3' style='display:none;'> How much money are you making?</div>
+				<div class='rotating-boxes' id='box-4' style='display:none;'> How much of that are you spending on monthly bills?</div>
 
+
+				
+				<!-- It's time you stop stressing about whether or not you should buy this or that.  Find out exactly what you should be spending in 5 minutes for free.   -->
+				<!-- We think that there are three types of money; income (money in), regular expenses (the bills you've promised to pay), and spending cash.  <br>
+				Spending cash is for everything from groceries to that new shirt you've been dying to get.  It doesn't matter what you spend your spending cash on.  What does matter is that you know how much you have.<br>
+				<b>The budget calculator below is an easy way to start managing your all-important, SPENDING CASH.</b>  <br>
+				It's time to find out just how much we really should be spending each week. -->
+		</div>
+	</div>
+	</div>
+	
 
 	<div id='content'>
 		<div id='userInputs'>
 			<div id='money-in' class='blocks'>
-				<p class='section-title'>Money In</p>
-
+				<div class='section-title'>Money In</div>
+				<div class='question'>How much money do you make each pay period? <i>(after taxes)</i> </div>
+				<input type="number" name="income" id='income' step='.01'> 
+				<br>
+				<br>
 				<div class='question'>How often are you paid?</div>
-				<div>
+				<div id='four-buttons'>
 					<div class='buttons'>
 						<input type='radio' name='payFreq' value='monthly' id='monthly'><label for='monthly'>Once a Month</label>
 					</div>
@@ -54,16 +58,13 @@
 					<div class='buttons'>
 						<input type='radio' name='payFreq' value='biweekly' id='biweekly'><label for='biweekly'>Every Two Weeks</label>
 					</div>
-				</div>
-				<br>
-				How much money do you make each pay period? <i>(after taxes)</i> <br>
-				<input type="number" name="income" id='income' step='.01'> 
+				</div>				
 			</div>
 			
 			<div id='money-out' class='blocks'>
 				<p class='section-title'>Money Out</p>
-				<b>What are your regular monthly expenses?</b> <br>
-				<i>Only include the expenses that recur each and every month.</i><br>
+				What are your regular monthly expenses? <br>
+				<!-- <i>Only include those that are the same each month.</i><br> -->
 				<br>
 				<div id='expenseGrid'>
 					<div class='expenseLabel'>

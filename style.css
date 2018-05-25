@@ -7,14 +7,20 @@ body, html {
 
 /* Title and Intro -------------------------------*/
 #website-intro {
-	/*Make a full screen opening picture*/
+	/*Make a big opening picture*/
 	background-image: 	url('Pictures/coffee-and-computer.jpg');
 	background-position: center;
     background-repeat: no-repeat;
-	height: 50%; 
+	height: 80%; 
 	background-size: cover;
-    border-style: none none solid none;
-    border-width: 20px; 
+}
+
+#grey-box {
+	height: 100%; 
+	background-color: #00000038;
+	border-style: none none solid none;
+    border-width: 1%; 
+    margin-bottom: -1%;
     border-color: #dc8445;
 }
 
@@ -39,8 +45,28 @@ body, html {
 	position: absolute;
     bottom: 50%; /*specifying location of the words*/
     /*left: 16px;*/
-    margin-bottom: 1%;
+    padding-bottom: 1%;
     width: 100%;
+    /*border-style: none none solid none;*/
+    border-width: 10px; 
+    border-color: #dc8445;
+    background-color: #00000038;
+}
+
+#site-explanation {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: 20%;
+	text-align: center;
+	font-size: 3vw;
+	color: white;
+	display: table;
+}
+
+.rotating-boxes {
+	vertical-align: middle;
+	display: table-cell;
 }
 /*-----------------------------------------------------*/
 
@@ -64,18 +90,32 @@ body, html {
 	font-size: 4vw;
     text-transform: uppercase;
     margin: 0 0 10px 0;
+    text-decoration: underline;
 }
 /*---------------------------------------------------*/
+
 
 /* Money In -----------------------------------------*/
 label {
 	cursor: pointer;
-	background-color: grey;
 	padding: 3px;
+	width: 100%;
+	font-size: 1.8vw;
+}
+
+#four-buttons{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin-left: 1%;
 }
 
 .buttons {
-	margin-bottom: 7px;
+	margin-bottom: 5%;
+	width: 95%;
+	border-color: #dd8544;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: thin;
 }
 
 input[type='radio']{
@@ -85,7 +125,7 @@ input[type='radio']{
 }
 
 input[type=radio]:checked + label{
-	background-color: black;
+		font-weight: 700;
 }
 
 .question{
@@ -96,6 +136,7 @@ input[type=radio]:checked + label{
 	width: 30%;
 	font-size: 2vw;
 }
+
 /*-------------------------------------------------*/
 
 
@@ -126,7 +167,8 @@ input[type=radio]:checked + label{
 
 /* Output Budget -------------------------------------------*/
 #calculate {
-	font-size: 2vw;
+	font-size: 3vw;
+	font-family: Times,'Times New Roman', serif;
 }
 /*---------------------------------------------------------*/
 
@@ -157,7 +199,9 @@ input[type=radio]:checked + label{
 		align: left;
 		font-size: 4vw;
 	   }
-
+	label, #calculate {
+		font-size: 4vw;
+	}
 		#income {
 			font-size: 4vw;
 			width: 20%;
