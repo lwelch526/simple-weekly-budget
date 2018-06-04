@@ -79,13 +79,33 @@ function makeBudget() {
 								'or find a way to decrease one or more of your monthly expenses.';
 			content.appendChild(para);
 		}
-		window.scrollTo(0,document.body.scrollHeight);
-		
+
+		if ($(window).width() < 600) {
+   			window.scrollTo(0,document.body.scrollHeight);
+		}
 }
 
 calcBtn.addEventListener('click', () => {
   makeBudget();
 });
+
+
+
+
+
+//// Change text when hovering //////
+const ourPhilosophy = document.querySelector('#our-philosophy');
+$('#our-philosophy').hover(function() {
+		ourPhilosophy.innerHTML = 'Setting a budget and sticking to it shouldn\'t be such a hassle. There is a simpler and more effective way than constraining yourself to a never ending list of expenese categories. In our eyes, there are just three kinds of money; your monthly bills, your savings, and your spending cash.  Based on your income and expenses, we\'ll tell you how much spending cash you have each week.  How you spend that money is entirely up to you!';
+		ourPhilosophy.innerHTML = 'You bring in X dollars every month.  And every month, you spend the same Y dollars on your monthly bills and regular expenses.  That leaves you with Z dollars to do with what you choose (spend or save).  That\'s where we come in.  This free website is here to help you determine, quickly and easily, how much you should be spending and saving each and every week.  Stop worrying so much about your finances, and start enjoying the money you do have responsibly.';
+		ourPhilosophy.style = ' ';
+		ourPhilosophy.classList.add('the-philosophy');
+	}, function() {
+  		ourPhilosophy.innerHTML = '<u>Our Philosophy</u>';
+  		ourPhilosophy.style = '';
+  		ourPhilosophy.classList.remove('the-philosophy');
+});
+
 
 
 /////////// Make text appear and disappear /////////////

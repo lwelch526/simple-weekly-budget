@@ -5,6 +5,10 @@ body, html {
     font-family: Times,'Times New Roman', serif;
 }
 
+html {
+	/*background-color: #dd854440;*/
+}
+
 /* Title and Intro -------------------------------*/
 #website-intro {
 	/*Make a big opening picture*/
@@ -61,12 +65,45 @@ body, html {
 	text-align: center;
 	font-size: 3vw;
 	color: white;
-	display: table;
+	/*display: table;     I had this here as a way to center vertically*/
 }
 
-.rotating-boxes {
-	vertical-align: middle;
-	display: table-cell;
+.philosophy-section {
+	/*vertical-align: middle;
+	display: table-cell;    one way to center vertically*/
+	position: absolute;
+	bottom: 45%;
+	width: 100%;
+	color: #f5f5f5d1;
+	/*margin: 0 40%;*/ /* margin or width, not both */
+}
+
+.the-philosophy {
+	font-size: 1.5vw;
+	bottom: 25%;
+	text-align: center;
+	width: auto; 
+	margin: 0 10%; 
+	padding: 1%; 
+	background-color: #00000038;
+	border-style: solid;
+	border-color: #f5f5f56b;
+	border-width: 1px;
+	color: #d4d48ff7;
+	color: white;
+}
+
+/*.rotating-boxes:hover {
+	color: yellow;
+}
+*/
+#directions {
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+	color: #f5f5f5a3;
+    font-size: 2.25vw;
+    font-style: italic;
 }
 /*-----------------------------------------------------*/
 
@@ -126,6 +163,7 @@ input[type='radio']{
 
 input[type=radio]:checked + label{
 		font-weight: 700;
+		text-decoration: underline;
 }
 
 .question{
@@ -167,7 +205,7 @@ input[type=radio]:checked + label{
 
 /* Output Budget -------------------------------------------*/
 #calculate {
-	font-size: 3vw;
+	font-size: 2.5vw;
 	font-family: Times,'Times New Roman', serif;
 }
 /*---------------------------------------------------------*/
@@ -196,10 +234,10 @@ input[type=radio]:checked + label{
 	  .expenseValue input{
 		width: 40%;
 		/*right: 2%;*/
-		align: left;
+		text-align: left;
 		font-size: 4vw;
 	   }
-	label, #calculate {
+	label, #calculate, #directions {
 		font-size: 4vw;
 	}
 		#income {
@@ -209,5 +247,12 @@ input[type=radio]:checked + label{
 		#expenseGrid {
 			grid-template-columns: 50% 50%;
 		}
+	.philosophy-section {
+		font-size: 4vw;
+	}
+	.the-philosophy {
+		font-size: 2.8vw;
+
+	}
 }
 /*-----------------------------------------------------*/
