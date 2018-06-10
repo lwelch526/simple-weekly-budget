@@ -6,7 +6,7 @@ body, html {
 }
 
 html {
-	/*background-color: #dd854440;*/
+	/*background-color: lightgrey;*/
 }
 
 /* Title and Intro -------------------------------*/
@@ -15,7 +15,7 @@ html {
 	background-image: 	url('Pictures/coffee-and-computer.jpg');
 	background-position: center;
     background-repeat: no-repeat;
-	height: 80%; 
+	height: 50%; 
 	background-size: cover;
 }
 
@@ -47,7 +47,7 @@ html {
 	color: white; /*Color of the text*/
 	text-align: center;
 	position: absolute;
-    bottom: 50%; /*specifying location of the words*/
+    bottom: 53%; /*specifying location of the words*/
     /*left: 16px;*/
     padding-bottom: 1%;
     width: 100%;
@@ -57,68 +57,42 @@ html {
     background-color: #00000038;
 }
 
-#site-explanation {
-	position: absolute;
-	width: 100%;
-	height: 30%;
-	bottom: 20%;
+/* Philosophy Dropdown -------------------------------------*/
+#dropdown{
 	text-align: center;
-	font-size: 3vw;
-	color: white;
-	/*display: table;     I had this here as a way to center vertically*/
+	padding: 4px;
+	background-color: #dc8445;
+	cursor: pointer;
 }
 
-.philosophy-section {
-	/*vertical-align: middle;
-	display: table-cell;    one way to center vertically*/
-	position: absolute;
-	bottom: 45%;
-	width: 100%;
-	color: #f5f5f5d1;
-	/*margin: 0 40%;*/ /* margin or width, not both */
+#philosophy {
+	margin: 16px 10%;
+	text-align: justify;
+	display: none;
 }
 
-.the-philosophy {
-	font-size: 1.5vw;
-	bottom: 25%;
+#philosophy li {
+	text-align: left;
+}
+
+
+
+/*  content/calculator---------------------*/
+
+#calculatorHeader{
 	text-align: center;
-	width: auto; 
-	margin: 0 10%; 
-	padding: 1%; 
-	background-color: #00000038;
-	border-style: solid;
-	border-color: #f5f5f56b;
-	border-width: 1px;
-	color: #d4d48ff7;
-	color: white;
+	padding: 4px;
+	border-style: solid none none none;
+	border-color: #dc8445;
 }
-
-/*.rotating-boxes:hover {
-	color: yellow;
-}
-*/
-#directions {
-	position: absolute;
-	bottom: 3%;
-	width: 100%;
-	color: #f5f5f5a3;
-    font-size: 2.25vw;
-    font-style: italic;
-}
-/*-----------------------------------------------------*/
 
 /* All 3 Blocks ------------------------------- */
 .blocks {
 	width: 33%;
-	/*background-color: #8699a752;*/
-	/*border-style: none solid;*/
 	border-color: grey;
 	border-width: 2px;
-	/*border-radius: 10px;*/
 	text-align: center;
 	margin-top: 1%;
-	top: 50%;
-	/*height: 20%;*/
 	font-size: 2vw;
 	float: left;
 }

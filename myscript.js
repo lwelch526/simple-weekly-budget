@@ -48,7 +48,7 @@ function makeBudget() {
 	monthlySpendingCash = payMonthly-expenseTotal;
 	weeklySpendingCash = monthlySpendingCash/4.34524;
 	weeklySpendingCash = Number(weeklySpendingCash.toFixed(2));
-
+	monthlySpendingCash = Number(monthlySpendingCash.toFixed(2));
 	// Add a new paragraph below the button
 		const outputBudget = document.querySelector('#outputBudget');
 
@@ -65,17 +65,23 @@ function makeBudget() {
 			let para = document.createElement('p'); // Create a p element
 			let para2 = document.createElement('p'); // Create a p element
 			let para3 = document.createElement('p'); // Create a p element
-			para.textContent = 'Weekly Spending Cash: $' + weeklySpendingCash  ;
+			para.textContent = 'Your Weekly Spending Cash: $' + weeklySpendingCash  ;
 			para.style.fontWeight = '800'; // Change the color of the text
-			para2.textContent = 'Regular Monthly Expenses: $' + expenseTotal  ;
-			para3.textContent = 'Average Monthly Income: $' + payMonthly  ;
+			para2.textContent = 'You are bringing in $' + payMonthly + ' each month. ' +
+								'And each month, you\'re contributing $' + expenseTotal + 
+								' to monthly bills, savings, and investments. That leaves ' +
+								'you with $' + monthlySpendingCash + ' to spend on everything ' +
+								'else each month ($' + weeklySpendingCash +
+								' each week).'
+			para3.textContent = 'All you have to do is spend less than $' + weeklySpendingCash +
+								' each week.';
 			content.appendChild(para);  // add the p element to the page as a child of content
-			content.appendChild(para3);
 			content.appendChild(para2);
+			content.appendChild(para3);
 		} else {
 			let para = document.createElement('p'); // Create a p element
-			para.textContent = 'You are spending more on your regular expenses than you are making each month. ' + 
-								'To free up some weekly spending money, consider cancelling a recurring expense, ' +
+			para.textContent = 'You\'re contributing more to monthly bills, savings, and investments than you\'re making each month. ' + 
+								'To free up some weekly spending money, consider cancelling a recurring expense, contribute less to savings, ' +
 								'or find a way to decrease one or more of your monthly expenses.';
 			content.appendChild(para);
 		}
@@ -93,47 +99,16 @@ calcBtn.addEventListener('click', () => {
 
 
 
-//// Change text when hovering //////
-const ourPhilosophy = document.querySelector('#our-philosophy');
-$('#our-philosophy').hover(function() {
-		ourPhilosophy.innerHTML = 'Setting a budget and sticking to it shouldn\'t be such a hassle. There is a simpler and more effective way than constraining yourself to a never ending list of expenese categories. In our eyes, there are just three kinds of money; your monthly bills, your savings, and your spending cash.  Based on your income and expenses, we\'ll tell you how much spending cash you have each week.  How you spend that money is entirely up to you!';
-		ourPhilosophy.innerHTML = 'You bring in X dollars every month.  And every month, you spend the same Y dollars on your monthly bills and regular expenses.  That leaves you with Z dollars to do with what you choose (spend or save).  That\'s where we come in.  This free website is here to help you determine, quickly and easily, how much you should be spending and saving each and every week.  Stop worrying so much about your finances, and start enjoying the money you do have responsibly.';
-		ourPhilosophy.style = ' ';
-		ourPhilosophy.classList.add('the-philosophy');
-	}, function() {
-  		ourPhilosophy.innerHTML = '<u>Our Philosophy</u>';
-  		ourPhilosophy.style = '';
-  		ourPhilosophy.classList.remove('the-philosophy');
-});
+//// Dropdown philosophy on click //////
+const dropdown = document.getElementById('dropdown');
+const philosophy = document.getElementById('philosophy');
+dropdown.onclick = function() {
+	if (dropdown.textContent == 'About This Site ▼' || dropdown.textContent ==  'About This Site &#9660;'){
+		dropdown.innerHTML = 'About This Site &#9650;';
+		philosophy.style.display = 'block';
+	} else{
+		dropdown.innerHTML = 'About This Site &#9660;';
+		philosophy.style.display = 'none';
+	}
+	};
 
-
-
-/////////// Make text appear and disappear /////////////
-const duration = 1000;
-const transition = 500;
-const fadeSpeed = 1000;
-
-// setTimeout(fade_in1, duration);
-// setTimeout(fade_out1, duration*2);
-// setTimeout(fade_in2, duration*2+transition);
-// setTimeout(fade_out2, duration*3+transition);
-// setTimeout(fade_in3, duration*3+transition*2);
-
-function fade_in1() {
-  $('#box-1').fadeIn(fadeSpeed);
-}
-function fade_out1() {
-  $('#box-1').fadeOut(fadeSpeed);
-}
-function fade_in2() {
-  $('#box-2').fadeIn(fadeSpeed);
-}
-function fade_out2() {
-  $('#box-2').fadeOut(fadeSpeed);
-}
-function fade_in3() {
-  $('#box-3').fadeIn(fadeSpeed);
-}
-function fade_out3() {
-  $('#box-2').fadeOut('slow');
-}
