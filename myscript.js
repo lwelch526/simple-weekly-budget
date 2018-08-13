@@ -74,7 +74,7 @@ function makeBudget() {
 								'else each month ($' + weeklySpendingCash +
 								' each week).'
 			para3.textContent = 'All you have to do is spend less than $' + weeklySpendingCash +
-								' each week on everything else.';
+								' each week.';
 			content.appendChild(para);  // add the p element to the page as a child of content
 			content.appendChild(para2);
 			content.appendChild(para3);

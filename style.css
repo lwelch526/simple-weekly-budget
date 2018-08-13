@@ -15,7 +15,7 @@ html {
 	background-image: 	url('Pictures/coffee-and-computer.jpg');
 	background-position: center;
     background-repeat: no-repeat;
-	height: 100%; 
+	height: 100%;
 	background-size: cover;
 }
 
@@ -43,7 +43,7 @@ html {
     padding-bottom: 1%;
     width: 100%;
     /*border-style: none none solid none;*/
-    border-width: 10px; 
+    border-width: 10px;
     border-color: #dc8445;
     background-color: #00000038;
 }
@@ -52,7 +52,7 @@ html {
 #philosophy-link, #budget-calc-link{
     background-color: #00000038;
     top: 62%;
-    position: absolute;	
+    position: absolute;
     text-decoration: none;
     color: white;
     padding: 10px;
@@ -63,11 +63,7 @@ html {
 }
 
 #website-intro a:hover{
-	/*font-weight: 550;*/
-	text-shadow: 0 0 4px white;
-	/*text-decoration: underline;*/
-	/*background-color: white;
-	color: orange;*/
+	background-color: #00000080;
 }
 
 #philosophy-link{
@@ -78,13 +74,13 @@ html {
 	left: 52%;
 }
 
-/*Header Bar*/
+/*Header Bar ----------------------------------------*/
 .header-bar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 1.5vw;
+    font-size: 2vw;
     background-color: #dc8445;
     color: black;
 }
@@ -111,20 +107,20 @@ html {
     padding: 14px 16px;
 }*/
 
-/*  calculator---------------------*/
+/*  calculator---------------------------------*/
 
 #calculatorHeader{
 	text-align: center;
 	padding: 4px;
-	border-style: solid none none none;
+	/* border-style: solid none none none;
 	border-color: #dc8445;
+	background-color: #dc8445; */
 }
 
 #calc-title{
-	font-size: 4vw;
+	font-size: 6vw;
 }
 
-/* All 3 Blocks ------------------------------- */
 .blocks {
 	width: 33%;
 	border-color: grey;
@@ -142,6 +138,11 @@ html {
     text-decoration: underline;
 }
 /*---------------------------------------------------*/
+
+/*Philosophy ----------------------------------------*/
+#text-content{
+	margin: 0 10%;
+}
 
 
 /* Money In -----------------------------------------*/
@@ -273,6 +274,19 @@ input[type=radio]:checked + label{
 		    right: 25%;
 		    top: 80%;
 		    text-align: center;
+		}
+		.header-bar ul{
+			font-size: 1.2rem;
+			display: none;
+		}
+		.header-bar li{
+			float: none;
+		}
+		#right-header{
+			float: none;
+		}
+		#calc-title{
+			font-size: 2rem;
 		}
 	}
 }
